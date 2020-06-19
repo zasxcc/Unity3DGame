@@ -11,7 +11,7 @@
 ## 카피 게임 : DragonFlight
 
 * 
-	* ![DragonFlight](http://archivenew.vop.co.kr/images/cbc24610323de10a2370cbbdfc998a66/2012-12/22035443_1.jpg)
+	* ![DragonFlight](https://image.zdnet.co.kr/2012/11/29/pWcaM7A6t3NeVUWs1nmN.jpg)
 	* 카피 게임 이미지. 원작은 2D 게임이지만 3D로 만들 예정.
 
 ---
