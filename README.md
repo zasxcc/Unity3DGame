@@ -2,7 +2,7 @@
 
 ---
 
-## 카피 게임 : DragonFlight
+## 2013182020 
 
 ---
 
@@ -10,7 +10,7 @@
 
 ---
 
-### 게임 진행 루틴
+## 카피 게임 : DragonFlight
 
 * 
 	* ![DragonFlight](http://archivenew.vop.co.kr/images/cbc24610323de10a2370cbbdfc998a66/2012-12/22035443_1.jpg)
