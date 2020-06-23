@@ -10,6 +10,8 @@ public class PlayerCtrl : MonoBehaviour
 
     public Transform tr;
     public Animator animator;
+    public GameObject bulletSword;
+    public Transform firePos;
 
 
     private void Awake()
@@ -31,9 +33,6 @@ public class PlayerCtrl : MonoBehaviour
     {
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
-
-        Debug.Log("h = "+ h.ToString());
-        Debug.Log("v = " + v.ToString());
 
         tr.Translate(Vector3.forward * moveSpeed * v * Time.deltaTime, Space.Self);
         tr.Translate(Vector3.right * moveSpeed * h * Time.deltaTime, Space.Self);
@@ -58,6 +57,7 @@ public class PlayerCtrl : MonoBehaviour
         {
             animator.Play("Melee Right Attack 01");
         }
+        Instantiate(bulletSword, firePos.position, firePos.rotation);
 
     }
 }
