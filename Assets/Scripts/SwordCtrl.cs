@@ -14,16 +14,19 @@ public class SwordCtrl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.tag == "PLAYER")
+        if(collision.collider.tag == "ENEMY")
         {
-            Debug.Log("Asdasdsa");
+            
+
+          
+            
         }
     }
 }

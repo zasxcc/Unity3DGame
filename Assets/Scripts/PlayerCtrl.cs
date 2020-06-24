@@ -29,7 +29,7 @@ public class PlayerCtrl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
