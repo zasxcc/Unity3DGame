@@ -22,6 +22,7 @@
 # Visual Studio cache directory
 .vs/
 Assets/Character/*
+Assets/AllSkyFree/*
 
 
 # Gradle cache directory
