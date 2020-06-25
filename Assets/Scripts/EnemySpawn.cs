@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour
 {
 
-    public GameObject spawnEnemy;
     public float spawnTime = 2.0f;
 
     //오브젝트 풀
@@ -43,7 +42,6 @@ public class EnemySpawn : MonoBehaviour
     {
         while (true)
         {
-            //Instantiate(spawnEnemy, transform.position, transform.rotation);
             Enemy01Pool[currEnemy01Index].transform.position = gameObject.transform.position;
             Enemy01Pool[currEnemy01Index].gameObject.SetActive(true);
 
