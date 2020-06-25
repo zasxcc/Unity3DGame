@@ -302,6 +302,8 @@ MonoBehaviour:
   spawnEnemy: {fileID: 7940901813117062250, guid: 6f931a96ce0ef99478f2bd817a78222e,
     type: 3}
   spawnTime: 2
+  prefab_Enemy01: {fileID: -948080379266746834, guid: 6f931a96ce0ef99478f2bd817a78222e,
+    type: 3}
 --- !u!4 &807004599
 Transform:
   m_ObjectHideFlags: 0
@@ -415,6 +417,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8788407149041189247, guid: 79227fbe0a1b5874da443119c38967d1,
+        type: 3}
+      propertyPath: prefab_swordBullet
+      value: 
+      objectReference: {fileID: 98237039391547412, guid: 7ea54c757c831714b9f7bc264fd74a62,
+        type: 3}
     - target: {fileID: 8788407150225077068, guid: 79227fbe0a1b5874da443119c38967d1,
         type: 3}
       propertyPath: m_LocalPosition.x

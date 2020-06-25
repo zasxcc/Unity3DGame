@@ -7,7 +7,7 @@ public class Enemy01_Ctrl : MonoBehaviour
     public float h = 0.0f;
     public float v = 0.0f;
     public float moveSpeed = 10.0f;
-    public int healthPoint = 100;
+    public int HP = 100;
 
     public Transform tr;
     public Animator animator;
@@ -27,5 +27,17 @@ public class Enemy01_Ctrl : MonoBehaviour
     void FixedUpdate()
     {
         tr.Translate(Vector3.forward * Time.deltaTime, Space.Self);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "BULLET")
+        {
+            HP -= 10;
+            if(HP <= 0)
+            {
+                gameObject.SetActive(false);
+            }
+        }
     }
 }
