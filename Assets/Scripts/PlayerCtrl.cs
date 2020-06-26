@@ -19,6 +19,7 @@ public class PlayerCtrl : MonoBehaviour
     private readonly int bulletMaxCount = 20;
     private int currBulletIndex = 0;
 
+    bool animNotify = true;
 
     private void Awake()
     {
@@ -37,6 +38,7 @@ public class PlayerCtrl : MonoBehaviour
             swordBulletPool.Add(b);
         }
         
+        
     }
 
     // Update is called once per frame
@@ -50,7 +52,19 @@ public class PlayerCtrl : MonoBehaviour
         
         if(Input.GetMouseButtonDown(0))
         {
-            Attack();
+            if (animNotify == true)
+            {
+                animNotify = false;
+                Attack();
+            }
+        }
+
+        if(animNotify == false)
+        {
+            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
+            {
+                animNotify = true;
+            }
         }
         
     }
@@ -73,7 +87,7 @@ public class PlayerCtrl : MonoBehaviour
         swordBulletPool[currBulletIndex].transform.position = firePos.transform.position;
         swordBulletPool[currBulletIndex].gameObject.SetActive(true);
 
-        if(currBulletIndex >= bulletMaxCount - 1)
+        if (currBulletIndex >= bulletMaxCount - 1)
         {
             currBulletIndex = 0;
         }
@@ -81,5 +95,6 @@ public class PlayerCtrl : MonoBehaviour
         {
             currBulletIndex++;
         }
+
     }
 }
