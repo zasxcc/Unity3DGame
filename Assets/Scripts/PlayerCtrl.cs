@@ -7,6 +7,7 @@ public class PlayerCtrl : MonoBehaviour
     public float h = 0.0f;
     public float v = 0.0f;
     public float moveSpeed = 10.0f;
+    public int HP = 100;
 
     private Transform tr;
     private Animator animator;
@@ -19,7 +20,9 @@ public class PlayerCtrl : MonoBehaviour
     private readonly int bulletMaxCount = 20;
     private int currBulletIndex = 0;
 
-    bool animNotify = true;
+    public int attackDelay = 100;
+    private int attackDelayCount = 0;
+    bool attackEnable = true;
 
     private void Awake()
     {
@@ -52,21 +55,25 @@ public class PlayerCtrl : MonoBehaviour
         
         if(Input.GetMouseButtonDown(0))
         {
-            if (animNotify == true)
+            if (attackEnable == true)
             {
-                animNotify = false;
                 Attack();
+                attackEnable = false;
             }
         }
 
-        if(animNotify == false)
+        //공격 딜레이
+        if(attackEnable == false)
         {
-            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
+            attackDelayCount++;
+            if(attackDelayCount >= attackDelay)
             {
-                animNotify = true;
+                attackEnable = true;
+                attackDelayCount = 0;
             }
         }
-        
+            
+
     }
 
     void Attack()
@@ -83,9 +90,9 @@ public class PlayerCtrl : MonoBehaviour
             animator.Play("Melee Right Attack 01");
         }
 
-
         swordBulletPool[currBulletIndex].transform.position = firePos.transform.position;
         swordBulletPool[currBulletIndex].gameObject.SetActive(true);
+        
 
         if (currBulletIndex >= bulletMaxCount - 1)
         {
@@ -97,4 +104,19 @@ public class PlayerCtrl : MonoBehaviour
         }
 
     }
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.tag == "ENEMY")
+        {
+            HP -= 10;
+            animator.Play("Take Damage");
+            if (HP <= 0)
+            {
+                gameObject.SetActive(false);
+
+            }
+        }
+     
+    }
+
 }

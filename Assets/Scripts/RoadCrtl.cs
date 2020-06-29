@@ -6,6 +6,7 @@ public class RoadCrtl : MonoBehaviour
 {
     public Transform tr;
     public Animator animator;
+    public float moveSpeed = 4.0f;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -19,6 +20,6 @@ public class RoadCrtl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        tr.Translate(Vector3.back * Time.deltaTime * 2, Space.Self);
+        tr.Translate(Vector3.back * Time.deltaTime * moveSpeed, Space.Self);
     }
 }

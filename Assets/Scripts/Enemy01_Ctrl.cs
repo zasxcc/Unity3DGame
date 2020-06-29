@@ -26,18 +26,23 @@ public class Enemy01_Ctrl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        tr.Translate(Vector3.forward * Time.deltaTime, Space.Self);
+        tr.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.Self);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.collider.tag == "BULLET")
+        if (collision.tag == "BULLET")
         {
             HP -= 10;
-            if(HP <= 0)
+            if (HP <= 0)
             {
                 gameObject.SetActive(false);
             }
+        }
+
+        else if(collision.tag == "PLAYER")
+        {
+            gameObject.SetActive(false);
         }
     }
 }
