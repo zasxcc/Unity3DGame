@@ -23,6 +23,8 @@
 .vs/
 Assets/Character/*
 Assets/AllSkyFree/*
+Assets/#NVJOB Simple Water Shaders/*
+Assets/Effect/*
 
 
 # Gradle cache directory
