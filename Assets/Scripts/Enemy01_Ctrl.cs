@@ -8,11 +8,16 @@ public class Enemy01_Ctrl : MonoBehaviour
     public float v = 0.0f;
     public float moveSpeed = 10.0f;
     public float HP = 100.0f;
-    float takeDamage;
 
+    private int attackSpeedDrop = 0;
+    private int attackPowerDrop = 1;
+    private int itemDrop = 0;
     private Transform tr;
     private Animator animator;
-    
+    public GameObject attackPowerItem;
+    public GameObject attackSpeedItem;
+
+    float takeDamage;
 
     private void Awake()
     {
@@ -43,6 +48,16 @@ public class Enemy01_Ctrl : MonoBehaviour
             HP -= takeDamage; 
             if (HP <= 0)
             {
+                itemDrop = Random.Range(0, 2);
+                if(itemDrop == attackPowerDrop)
+                {
+                    Instantiate(attackPowerItem, tr.position, tr.rotation);
+                }
+                else if(itemDrop == attackSpeedDrop)
+                {
+                    Instantiate(attackSpeedItem, tr.position, tr.rotation);
+                }
+
                 gameObject.SetActive(false);
             }
         }

@@ -24,7 +24,10 @@ public class AttackSpeedItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Destroy(gameObject);
+        if (collision.tag == "PLAYER")
+        {
+            Destroy(gameObject);
+        }
 
     }
 }

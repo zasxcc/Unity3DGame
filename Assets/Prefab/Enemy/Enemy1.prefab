@@ -1139,7 +1139,10 @@ MonoBehaviour:
   v: 0
   moveSpeed: 5
   HP: 100
-  pc: {fileID: 0}
+  attackPowerItem: {fileID: 4623189996577688046, guid: 5e9d36be0b9ef004b9a3ffa7a4ed5ffa,
+    type: 3}
+  attackSpeedItem: {fileID: 5861550543952829447, guid: 112b5ae4a5b315a46b0fb1a70935ddfc,
+    type: 3}
 --- !u!54 &3248317231777868228
 Rigidbody:
   m_ObjectHideFlags: 0
