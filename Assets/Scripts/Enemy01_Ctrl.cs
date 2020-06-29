@@ -9,8 +9,8 @@ public class Enemy01_Ctrl : MonoBehaviour
     public float moveSpeed = 10.0f;
     public int HP = 100;
 
-    public Transform tr;
-    public Animator animator;
+    private Transform tr;
+    private Animator animator;
     private void Awake()
     {
         animator = GetComponent<Animator>();

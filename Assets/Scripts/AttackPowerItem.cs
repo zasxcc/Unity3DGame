@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackSpeedItem : MonoBehaviour
+public class AttackPowerItem : MonoBehaviour
 {
-    // Start is called before the first frame update
     private Transform tr;
     private float rotateSpeed = 10;
 
