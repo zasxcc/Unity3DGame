@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
-    public float h = 0.0f;
-    public float v = 0.0f;
+    private float h = 0.0f;
+    private float v = 0.0f;
     public float moveSpeed = 10.0f;
     public int HP = 100;
+    public float attackPower = 10.0f;
 
     private Transform tr;
     private Animator animator;
@@ -20,8 +21,8 @@ public class PlayerCtrl : MonoBehaviour
     private readonly int bulletMaxCount = 20;
     private int currBulletIndex = 0;
 
-    public int attackDelay = 100;
-    private int attackDelayCount = 0;
+    public float attackDelay = 100.0f;
+    private float attackDelayCount = 0.0f;
     bool attackEnable = true;
 
     private void Awake()
@@ -37,11 +38,10 @@ public class PlayerCtrl : MonoBehaviour
         for(int i = 0; i<bulletMaxCount; ++i)
         {
             SwordCtrl b = Instantiate<SwordCtrl>(prefab_swordBullet);
+            b.SetDamage(attackPower);
             b.gameObject.SetActive(false);
             swordBulletPool.Add(b);
         }
-        
-        
     }
 
     // Update is called once per frame
@@ -73,7 +73,6 @@ public class PlayerCtrl : MonoBehaviour
             }
         }
             
-
     }
 
     void Attack()
@@ -115,6 +114,19 @@ public class PlayerCtrl : MonoBehaviour
                 gameObject.SetActive(false);
 
             }
+        }
+
+        else if(collision.tag == "POWERITEM")
+        {
+            attackPower += 10.0f;
+            for(int i = 0; i<bulletMaxCount; ++i)
+            {
+                swordBulletPool[i].SetDamage(attackPower);
+            }
+        }
+        else if(collision.tag == "ATTACKSPEEDITEM")
+        {
+            attackDelay = attackDelay * 0.8f;
         }
      
     }

@@ -8,6 +8,8 @@ public class AttackSpeedItem : MonoBehaviour
     private Transform tr;
     private float rotateSpeed = 10;
 
+    public float attackSpeed = 5.0f;
+
     void Start()
     {
         tr = GetComponent<Transform>();
@@ -18,5 +20,11 @@ public class AttackSpeedItem : MonoBehaviour
     {
         tr.rotation = Quaternion.Euler(new Vector3(180, rotateSpeed, 0));
         rotateSpeed += 10;
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        Destroy(gameObject);
+
     }
 }

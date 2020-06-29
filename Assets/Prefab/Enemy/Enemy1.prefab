@@ -1139,8 +1139,7 @@ MonoBehaviour:
   v: 0
   moveSpeed: 5
   HP: 100
-  tr: {fileID: 0}
-  animator: {fileID: 0}
+  pc: {fileID: 0}
 --- !u!54 &3248317231777868228
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4623189996576666416}
   - component: {fileID: 4623189996575546686}
   - component: {fileID: 3211304878969601319}
+  - component: {fileID: 6376603204765997793}
   m_Layer: 0
   m_Name: AttackPowerItem
-  m_TagString: Untagged
+  m_TagString: ATTACKSPPEDITEM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +97,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002832b461a9a284cbf8f74d3edee8eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackPower: 10
+--- !u!65 &6376603204765997793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4623189996577688046}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0967778, y: 0.65243113, z: 0.064961135}
+  m_Center: {x: 0.0005717408, y: -0.21851999, z: -0.00000008195639}
 --- !u!1 &4883029417188382629
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,9 +7,9 @@ public class SwordCtrl : MonoBehaviour
     // Start is called before the first frame update
     private Transform tr;
 
-    public bool isColl = false;
-    public int collCount = 0;
-    public float damage = 10.0f;
+    private bool isColl = false;
+    private int collCount = 0;
+    private float damage;
     public float speed = 100.0f;
 
     public ParticleSystem particle;
@@ -38,5 +38,14 @@ public class SwordCtrl : MonoBehaviour
             Instantiate(particle, transform.position, transform.rotation);
             gameObject.SetActive(false);
         }  
+    }
+
+    public void SetDamage(float dmg)
+    {
+        damage = dmg;
+    }
+    public float GetDamage()
+    {
+        return damage;
     }
 }

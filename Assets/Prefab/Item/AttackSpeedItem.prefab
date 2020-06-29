@@ -198,9 +198,10 @@ GameObject:
   - component: {fileID: 5861550543955961561}
   - component: {fileID: 5861550543954970839}
   - component: {fileID: -2621108878531610722}
+  - component: {fileID: 3032579438246900690}
   m_Layer: 0
   m_Name: AttackSpeedItem
-  m_TagString: Untagged
+  m_TagString: POWERITEM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,6 +283,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa8a27914672b048986a372e5710048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSpeed: 5
+--- !u!65 &3032579438246900690
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861550543952829447}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.096589565, y: 0.65243113, z: 0.064961135}
+  m_Center: {x: -0.0035897493, y: -0.21851999, z: -0.00000008195639}
 --- !u!1 &5943151951640795134
 GameObject:
   m_ObjectHideFlags: 0

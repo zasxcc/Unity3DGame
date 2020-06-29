@@ -7,10 +7,13 @@ public class Enemy01_Ctrl : MonoBehaviour
     public float h = 0.0f;
     public float v = 0.0f;
     public float moveSpeed = 10.0f;
-    public int HP = 100;
+    public float HP = 100.0f;
+    float takeDamage;
 
     private Transform tr;
     private Animator animator;
+    
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -21,6 +24,7 @@ public class Enemy01_Ctrl : MonoBehaviour
     void Start()
     {
         
+
     }
 
     // Update is called once per frame
@@ -33,7 +37,10 @@ public class Enemy01_Ctrl : MonoBehaviour
     {
         if (collision.tag == "BULLET")
         {
-            HP -= 10;
+            PlayerCtrl pc = GameObject.Find("Player").GetComponent<PlayerCtrl>();
+            takeDamage = pc.attackPower;
+
+            HP -= takeDamage; 
             if (HP <= 0)
             {
                 gameObject.SetActive(false);
