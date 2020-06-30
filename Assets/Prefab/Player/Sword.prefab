@@ -4848,12 +4848,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e9b851074c1e2f47bf07048daa48cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isColl: 0
-  collCount: 0
-  damage: 10
   speed: 10
-  particle: {fileID: 6139310630041669578, guid: c597aef770875ca42be5e06358684673,
-    type: 3}
+  particle: {fileID: 19800004, guid: f95ff734540a0d749be6571b6cb5b37f, type: 3}
 --- !u!65 &3342985983856307774
 BoxCollider:
   m_ObjectHideFlags: 0

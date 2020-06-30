@@ -6,7 +6,6 @@ public class SwordCtrl : MonoBehaviour
 {
     // Start is called before the first frame update
     private Transform tr;
-
     private bool isColl = false;
     private int collCount = 0;
     private float damage;
@@ -35,7 +34,11 @@ public class SwordCtrl : MonoBehaviour
     {
         if (collision.tag == "ENEMY")
         {
-            Instantiate(particle, transform.position, transform.rotation);
+            Vector3 v;
+            v.x = 0.0f;
+            v.y = 0.0f;
+            v.z = 0.0f;
+            Instantiate(particle, transform.position,Quaternion.LookRotation(v));
             gameObject.SetActive(false);
         }  
     }

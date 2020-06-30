@@ -14,8 +14,12 @@ public class Enemy01_Ctrl : MonoBehaviour
     private int itemDrop = 0;
     private Transform tr;
     private Animator animator;
+
     public GameObject attackPowerItem;
     public GameObject attackSpeedItem;
+    public GameObject deathEffect;
+    Transform t;
+
 
     float takeDamage;
 
@@ -43,21 +47,25 @@ public class Enemy01_Ctrl : MonoBehaviour
         if (collision.tag == "BULLET")
         {
             PlayerCtrl pc = GameObject.Find("Player").GetComponent<PlayerCtrl>();
+            Score sc = GameObject.Find("Score").GetComponent<Score>();
             takeDamage = pc.attackPower;
 
-            HP -= takeDamage; 
+            HP -= takeDamage;
             if (HP <= 0)
             {
+                sc.AddScore(10);
                 itemDrop = Random.Range(0, 2);
-                if(itemDrop == attackPowerDrop)
+                if (itemDrop == attackPowerDrop)
                 {
                     Instantiate(attackPowerItem, tr.position, tr.rotation);
                 }
-                else if(itemDrop == attackSpeedDrop)
+                else if (itemDrop == attackSpeedDrop)
                 {
                     Instantiate(attackSpeedItem, tr.position, tr.rotation);
                 }
-
+                Vector3 v = tr.position;
+                v.y = v.y + 1.0f;
+                Instantiate(deathEffect, v, tr.rotation);
                 gameObject.SetActive(false);
             }
         }
