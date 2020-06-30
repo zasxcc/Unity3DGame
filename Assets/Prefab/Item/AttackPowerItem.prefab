@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6376603204765997793}
   m_Layer: 0
   m_Name: AttackPowerItem
-  m_TagString: ATTACKSPPEDITEM
+  m_TagString: POWERITEM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
