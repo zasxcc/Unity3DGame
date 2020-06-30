@@ -26,7 +26,7 @@ public class SwordCtrl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        tr.Translate(Vector3.up * speed * -1 * Time.deltaTime, Space.Self);
+        tr.Translate(Vector3.up * speed * 1 * Time.deltaTime, Space.Self);
     }
 
 
