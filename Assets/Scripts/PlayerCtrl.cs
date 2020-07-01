@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class PlayerCtrl : MonoBehaviour
 {
     private float h = 0.0f;
@@ -111,8 +112,7 @@ public class PlayerCtrl : MonoBehaviour
             animator.Play("Take Damage");
             if (HP <= 0)
             {
-                gameObject.SetActive(false);
-
+                SceneManager.LoadScene("HighScoreScene");
             }
         }
 
