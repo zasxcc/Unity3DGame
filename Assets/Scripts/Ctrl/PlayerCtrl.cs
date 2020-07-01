@@ -11,9 +11,14 @@ public class PlayerCtrl : MonoBehaviour
     public int HP = 100;
     public float attackPower = 10.0f;
 
+    public AudioClip attackSound;
+
+
     private Transform tr;
     private Animator animator;
+    private AudioSource audioSource;
     public Transform firePos;
+    
 
     //공격 오브젝트 풀
     public SwordCtrl prefab_swordBullet;
@@ -44,6 +49,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         tr = GetComponent<Transform>();
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -80,6 +86,7 @@ public class PlayerCtrl : MonoBehaviour
         {
             if (attackEnable == true)
             {
+                audioSource.PlayOneShot(attackSound);
                 Attack();
                 attackEnable = false;
             }

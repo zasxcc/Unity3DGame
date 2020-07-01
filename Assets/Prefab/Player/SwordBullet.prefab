@@ -9532,7 +9532,7 @@ GameObject:
   - component: {fileID: -2421054289003091299}
   - component: {fileID: -2051250888801553278}
   m_Layer: 0
-  m_Name: MoonSword 2
+  m_Name: SwordBullet
   m_TagString: BULLET
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

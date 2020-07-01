@@ -14,7 +14,6 @@ public class SwordCtrl : MonoBehaviour
     private void Awake()
     {
         tr = GetComponent<Transform>();
-
     }
     void Start()
     {
@@ -24,6 +23,7 @@ public class SwordCtrl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         tr.Translate(Vector3.up * speed * 1 * Time.deltaTime, Space.Self);
     }
 
@@ -35,7 +35,7 @@ public class SwordCtrl : MonoBehaviour
             Vector3 v;
             v.x = 0.0f;
             v.y = 0.0f;
-            v.z = 0.0f;
+            v.z = 0.0f;        
             Instantiate(particle, transform.position,Quaternion.LookRotation(v));
             gameObject.SetActive(false);
         }  

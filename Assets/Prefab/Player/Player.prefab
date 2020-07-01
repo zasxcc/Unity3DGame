@@ -16840,6 +16840,7 @@ MonoBehaviour:
   moveSpeed: 10
   HP: 100
   attackPower: 10
+  attackSound: {fileID: 8300000, guid: 627edac88da176842bc0af11fac6cce2, type: 3}
   firePos: {fileID: 5643116230809531750}
   prefab_swordBullet: {fileID: -2421054289003091299, guid: dca3ca4218600734b817e1203f72fc57,
     type: 3}

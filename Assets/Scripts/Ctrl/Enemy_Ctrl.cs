@@ -18,6 +18,10 @@ public class Enemy_Ctrl : MonoBehaviour
     protected Transform tr;
     protected Animator enemyAnimator;
 
+    protected AudioSource audioSource;
+    public AudioClip hitSound;
+    public AudioClip skillSound;
+
     public GameObject attackPowerItem;
     public GameObject attackSpeedItem;
     public GameObject deathEffect;
@@ -30,6 +34,7 @@ public class Enemy_Ctrl : MonoBehaviour
     {
         enemyAnimator = GetComponent<Animator>();
         tr = GetComponent<Transform>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -52,6 +57,7 @@ public class Enemy_Ctrl : MonoBehaviour
     }
     protected void SkillDamageProgress(int score)
     {
+        audioSource.PlayOneShot(skillSound);
         PlayerCtrl pc = GameObject.Find("Player").GetComponent<PlayerCtrl>();
         enemyAnimator.Play("Take Damage");
 
@@ -64,6 +70,7 @@ public class Enemy_Ctrl : MonoBehaviour
 
     protected void BulletDamaeProgress(int score)
     {
+        audioSource.PlayOneShot(hitSound);
         PlayerCtrl pc = GameObject.Find("Player").GetComponent<PlayerCtrl>();
         enemyAnimator.Play("Take Damage");
 

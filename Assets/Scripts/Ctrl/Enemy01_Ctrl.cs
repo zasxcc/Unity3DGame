@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy01_Ctrl: Enemy_Ctrl
 {
+   
     // Start is called before the first frame update
     void Start()
     {
