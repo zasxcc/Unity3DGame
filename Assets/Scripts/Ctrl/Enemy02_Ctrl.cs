@@ -14,10 +14,14 @@ public class Enemy02_Ctrl : Enemy_Ctrl
     // Update is called once per frame
     void FixedUpdate()
     {
+        //스킬 맞았는지 검사, 
+        //맞았으면 잠시 전진X
         if (!isTakeSkill)
         {
             tr.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.Self);
         }
+        //스킬 맞았는지 검사,
+        //맞았으면 한바퀴 돌린다.
         if (isTakeSkill)
         {
             tr.Rotate(0.0f, rotate, 0.0f);

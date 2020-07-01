@@ -58,6 +58,7 @@ public class Enemy_Ctrl : MonoBehaviour
         takeDamage = pc.attackPower * 1.5f;
         isDeath(takeDamage, score);
 
+        //스킬 효과 발동
         isTakeSkill = true;
     }
 
@@ -66,6 +67,7 @@ public class Enemy_Ctrl : MonoBehaviour
         PlayerCtrl pc = GameObject.Find("Player").GetComponent<PlayerCtrl>();
         enemyAnimator.Play("Take Damage");
 
+        //적 밀기
         tr.Translate(Vector3.forward * -1 * 1, Space.Self);
 
         takeDamage = pc.attackPower;
@@ -74,7 +76,9 @@ public class Enemy_Ctrl : MonoBehaviour
 
     protected void DropItem()
     {
-        itemDrop = Random.Range(0, 2);
+        //드랍확률 20%확률로 아이템 드랍, 
+        //드랍시 50%는 공격속도 아이템, 50%는 공격력 아이템
+        itemDrop = Random.Range(0, 10);
         if (itemDrop == attackPowerDrop)
         {
             Instantiate(attackPowerItem, tr.position, tr.rotation);
