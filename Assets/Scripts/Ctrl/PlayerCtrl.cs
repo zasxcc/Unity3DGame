@@ -158,7 +158,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         skillPool[currSkillIndex].transform.position = firePos.transform.position;
         skillPool[currSkillIndex].gameObject.SetActive(true);
-
+        animator.Play("Spin Attack");
 
         if (currSkillIndex >= skillMaxCount - 1)
         {
