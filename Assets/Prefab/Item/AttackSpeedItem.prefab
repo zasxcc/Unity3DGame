@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 3032579438246900690}
   m_Layer: 0
   m_Name: AttackSpeedItem
-  m_TagString: ATTACKSPPEDITEM
+  m_TagString: ATTACKSPEEDITEM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

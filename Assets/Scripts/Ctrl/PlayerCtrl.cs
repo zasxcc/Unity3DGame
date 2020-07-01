@@ -22,7 +22,7 @@ public class PlayerCtrl : MonoBehaviour
     private readonly int bulletMaxCount = 20;
     private int currBulletIndex = 0;
 
-    public float attackDelay = 100.0f;
+    public float attackDelay = 30.0f;
     private float attackDelayCount = 0.0f;
     bool attackEnable = true;
 
@@ -126,7 +126,7 @@ public class PlayerCtrl : MonoBehaviour
         }
         else if(collision.tag == "ATTACKSPEEDITEM")
         {
-            attackDelay = attackDelay * 0.8f;
+            attackDelay = attackDelay * 0.9f;
         }
      
     }

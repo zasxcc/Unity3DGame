@@ -2,47 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy01_Ctrl : MonoBehaviour
+public class Enemy02_Ctrl : Enemy_Ctrl
 {
-    public float h = 0.0f;
-    public float v = 0.0f;
-    public float moveSpeed = 10.0f;
-    public float HP = 100.0f;
-
-    private int attackSpeedDrop = 0;
-    private int attackPowerDrop = 1;
-    private int itemDrop = 0;
-    private Transform tr;
-    private Animator animator;
-
-    public GameObject attackPowerItem;
-    public GameObject attackSpeedItem;
-    public GameObject deathEffect;
-    Transform t;
-
-
-    float takeDamage;
-
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-        tr = GetComponent<Transform>();
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        
-
+        HP = 50.0f;
+        moveSpeed = 4.5f;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        tr.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.Self);
+        
     }
 
-    private void OnTriggerEnter(Collider collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.tag == "BULLET")
         {
@@ -53,7 +28,7 @@ public class Enemy01_Ctrl : MonoBehaviour
             HP -= takeDamage;
             if (HP <= 0)
             {
-                sc.AddScore(10);
+                sc.AddScore(20);
                 itemDrop = Random.Range(0, 2);
                 if (itemDrop == attackPowerDrop)
                 {
@@ -70,7 +45,7 @@ public class Enemy01_Ctrl : MonoBehaviour
             }
         }
 
-        else if(collision.tag == "PLAYER")
+        else if (collision.tag == "PLAYER")
         {
             gameObject.SetActive(false);
         }

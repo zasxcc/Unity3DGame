@@ -8,8 +8,8 @@ public class EnemySpawn : MonoBehaviour
     public float spawnTime = 2.0f;
 
     //오브젝트 풀
-    public Enemy01_Ctrl prefab_Enemy01;
-    private List<Enemy01_Ctrl> Enemy01Pool = new List<Enemy01_Ctrl>();
+    public Enemy_Ctrl prefab_Enemy01;
+    private List<Enemy_Ctrl> Enemy01Pool = new List<Enemy_Ctrl>();
     //생성 갯수
     private readonly int Enemy01MaxCount = 20;
     private int currEnemy01Index = 0;
@@ -25,7 +25,7 @@ public class EnemySpawn : MonoBehaviour
     {
         for (int i = 0; i < Enemy01MaxCount; ++i)
         {
-            Enemy01_Ctrl e01 = Instantiate<Enemy01_Ctrl>(prefab_Enemy01);
+            Enemy_Ctrl e01 = Instantiate<Enemy_Ctrl>(prefab_Enemy01);
             e01.gameObject.SetActive(false);
             Enemy01Pool.Add(e01);
         }

@@ -1065,9 +1065,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7940901813117338608}
   - component: {fileID: 7940901813124339568}
-  - component: {fileID: -948080379266746834}
   - component: {fileID: 3248317231777868228}
   - component: {fileID: 8203232841733960252}
+  - component: {fileID: 7702772353958348758}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: ENEMY
@@ -1123,27 +1123,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-948080379266746834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7940901813117062250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78dff48b203270d4ba20a593c0458ee7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  h: 0
-  v: 0
-  moveSpeed: 5
-  HP: 100
-  attackPowerItem: {fileID: 4623189996577688046, guid: 5e9d36be0b9ef004b9a3ffa7a4ed5ffa,
-    type: 3}
-  attackSpeedItem: {fileID: 5861550543952829447, guid: 112b5ae4a5b315a46b0fb1a70935ddfc,
-    type: 3}
-  deathEffect: {fileID: 100004, guid: 7867af58a6ec48846ae807eb4022fbaa, type: 3}
 --- !u!54 &3248317231777868228
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1173,6 +1152,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.45482874, y: 1.2573063, z: 1}
   m_Center: {x: 0.0073673725, y: 0.671898, z: 0}
+--- !u!114 &7702772353958348758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7940901813117062250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ab70168285669b42bb3a1370654c9a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 4
+  HP: 100
+  attackPowerItem: {fileID: 4623189996577688046, guid: 5e9d36be0b9ef004b9a3ffa7a4ed5ffa,
+    type: 3}
+  attackSpeedItem: {fileID: 5861550543952829447, guid: 112b5ae4a5b315a46b0fb1a70935ddfc,
+    type: 3}
+  deathEffect: {fileID: 1965343156803978, guid: aa8d6482d70a23445b4b2a928ed1b845,
+    type: 3}
 --- !u!1 &7940901813117229096
 GameObject:
   m_ObjectHideFlags: 0
