@@ -12,37 +12,34 @@ public class Enemy02_Ctrl : Enemy_Ctrl
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (!isTakeSkill)
+        {
+            tr.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.Self);
+        }
+        if (isTakeSkill)
+        {
+            tr.Rotate(0.0f, rotate, 0.0f);
+            Debug.Log(tr.rotation.y);
+            if (tr.rotation.y == 1.0f)
+            {
+                isTakeSkill = false;
+                tr.rotation.Set(0.0f, 180.0f, 0.0f, 0.0f);
+            }
+        }
     }
 
-    void OnTriggerEnter(Collider collision)
+    new void OnTriggerEnter(Collider collision)
     {
         if (collision.tag == "BULLET")
         {
-            PlayerCtrl pc = GameObject.Find("Player").GetComponent<PlayerCtrl>();
-            Score sc = GameObject.Find("Score").GetComponent<Score>();
-            takeDamage = pc.attackPower;
+            BulletDamaeProgress(20);
+        }
 
-            HP -= takeDamage;
-            if (HP <= 0)
-            {
-                sc.AddScore(20);
-                itemDrop = Random.Range(0, 2);
-                if (itemDrop == attackPowerDrop)
-                {
-                    Instantiate(attackPowerItem, tr.position, tr.rotation);
-                }
-                else if (itemDrop == attackSpeedDrop)
-                {
-                    Instantiate(attackSpeedItem, tr.position, tr.rotation);
-                }
-                Vector3 v = tr.position;
-                v.y = v.y + 1.0f;
-                Instantiate(deathEffect, v, tr.rotation);
-                gameObject.SetActive(false);
-            }
+        else if (collision.tag == "SKILL")
+        {
+            SkillDamageProgress(20);
         }
 
         else if (collision.tag == "PLAYER")

@@ -15,16 +15,30 @@ public class PlayerCtrl : MonoBehaviour
     private Animator animator;
     public Transform firePos;
 
-    //오브젝트 풀
+    //공격 오브젝트 풀
     public SwordCtrl prefab_swordBullet;
     private List<SwordCtrl> swordBulletPool = new List<SwordCtrl>();
     //생성 갯수
     private readonly int bulletMaxCount = 20;
     private int currBulletIndex = 0;
 
+
+    //스킬 오브젝트 풀
+    public SkillCtrl prefab_Skill;
+    private List<SkillCtrl> skillPool = new List<SkillCtrl>();
+    //생성 갯수
+    private readonly int skillMaxCount = 5;
+    private int currSkillIndex = 0;
+
+    
+
     public float attackDelay = 30.0f;
     private float attackDelayCount = 0.0f;
     bool attackEnable = true;
+
+    public float skillDelay = 100.0f;
+    private float skillDelayCount = 0.0f;
+    bool skillEnable = true;
 
     private void Awake()
     {
@@ -36,12 +50,19 @@ public class PlayerCtrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i<bulletMaxCount; ++i)
+        for (int i = 0; i < bulletMaxCount; ++i)
         {
             SwordCtrl b = Instantiate<SwordCtrl>(prefab_swordBullet);
             b.SetDamage(attackPower);
             b.gameObject.SetActive(false);
             swordBulletPool.Add(b);
+        }
+
+        for (int i = 0; i<skillMaxCount; ++i)
+        {
+            SkillCtrl skill = Instantiate<SkillCtrl>(prefab_Skill);
+            skill.gameObject.SetActive(false);
+            skillPool.Add(skill);
         }
     }
 
@@ -54,12 +75,23 @@ public class PlayerCtrl : MonoBehaviour
         tr.Translate(Vector3.forward * moveSpeed * v * Time.deltaTime, Space.Self);
         tr.Translate(Vector3.right * moveSpeed * h * Time.deltaTime, Space.Self);
         
+        //공격
         if(Input.GetMouseButtonDown(0))
         {
             if (attackEnable == true)
             {
                 Attack();
                 attackEnable = false;
+            }
+        }
+
+        //스킬
+        if(Input.GetKey(KeyCode.Z))
+        {
+            if(skillEnable == true)
+            {
+                Skill();
+                skillEnable = false;
             }
         }
 
@@ -71,6 +103,17 @@ public class PlayerCtrl : MonoBehaviour
             {
                 attackEnable = true;
                 attackDelayCount = 0;
+            }
+        }
+
+        //스킬 딜레이
+        if(skillEnable == false)
+        {
+            skillDelayCount++;
+            if(skillDelayCount >= skillDelay)
+            {
+                skillEnable = true;
+                skillDelayCount = 0;
             }
         }
             
@@ -102,7 +145,22 @@ public class PlayerCtrl : MonoBehaviour
         {
             currBulletIndex++;
         }
+    }
 
+    void Skill()
+    {
+        skillPool[currSkillIndex].transform.position = firePos.transform.position;
+        skillPool[currSkillIndex].gameObject.SetActive(true);
+
+
+        if (currSkillIndex >= skillMaxCount - 1)
+        {
+            currSkillIndex = 0;
+        }
+        else
+        {
+            currSkillIndex++;
+        }
     }
     private void OnTriggerEnter(Collider collision)
     {
