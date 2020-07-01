@@ -10,7 +10,7 @@ TagManager:
   - POWERITEM
   - FxTemporaire
   - ATTACKSPEEDITEM
-  - ATTACKSPPEDITEM
+  - SKILL
   layers:
   - Default
   - TransparentFX
