@@ -10,9 +10,15 @@ public class EnemySpawn : MonoBehaviour
     //오브젝트 풀
     public Enemy_Ctrl prefab_Enemy01;
     private List<Enemy_Ctrl> Enemy01Pool = new List<Enemy_Ctrl>();
+
+    public Enemy_Ctrl prefab_Enemy02;
+    private List<Enemy_Ctrl> Enemy02Pool = new List<Enemy_Ctrl>();
     //생성 갯수
-    private readonly int Enemy01MaxCount = 20;
+    private readonly int Enemy01MaxCount = 10;
     private int currEnemy01Index = 0;
+
+    private readonly int Enemy02MaxCount = 10;
+    private int currEnemy02Index = 0;
 
     private void Awake()
     {
@@ -29,6 +35,13 @@ public class EnemySpawn : MonoBehaviour
             e01.gameObject.SetActive(false);
             Enemy01Pool.Add(e01);
         }
+
+        for (int i = 0; i < Enemy02MaxCount; ++i)
+        {
+            Enemy_Ctrl e02 = Instantiate<Enemy_Ctrl>(prefab_Enemy02);
+            e02.gameObject.SetActive(false);
+            Enemy02Pool.Add(e02);
+        }
         StartCoroutine(SpawnEnemy());
     }
 
@@ -42,17 +55,36 @@ public class EnemySpawn : MonoBehaviour
     {
         while (true)
         {
-            Enemy01Pool[currEnemy01Index].transform.position = gameObject.transform.position;
-            Enemy01Pool[currEnemy01Index].gameObject.SetActive(true);
-
-            if (currEnemy01Index >= Enemy01MaxCount - 1)
+            int num = Random.Range(0, 10);
+            if (num < 7)
             {
-                currEnemy01Index = 0;
+                Enemy01Pool[currEnemy01Index].transform.position = gameObject.transform.position;
+                Enemy01Pool[currEnemy01Index].gameObject.SetActive(true);
+
+                if (currEnemy01Index >= Enemy01MaxCount - 1)
+                {
+                    currEnemy01Index = 0;
+                }
+                else
+                {
+                    currEnemy01Index++;
+                }
             }
             else
             {
-                currEnemy01Index++;
+                Enemy02Pool[currEnemy02Index].transform.position = gameObject.transform.position;
+                Enemy02Pool[currEnemy02Index].gameObject.SetActive(true);
+
+                if (currEnemy02Index >= Enemy02MaxCount - 1)
+                {
+                    currEnemy02Index = 0;
+                }
+                else
+                {
+                    currEnemy02Index++;
+                }
             }
+
             yield return new WaitForSeconds(spawnTime);
         }
     }
