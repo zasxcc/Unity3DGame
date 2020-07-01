@@ -17,6 +17,6 @@ public class HighScore : MonoBehaviour
     void FixedUpdate()
     {
         highScore = PlayerPrefs.GetInt("HighScore");
-        text.text = "HIGHSCORE : " + highScore.ToString();
+        text.text = highScore.ToString();
     }
 }
