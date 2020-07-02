@@ -31,6 +31,7 @@ public class Enemy01_Ctrl: Enemy_Ctrl
             {
                 isTakeSkill = false;
                 tr.rotation.Set(0.0f, 180.0f, 0.0f, 0.0f);
+                
             }
         }
     }

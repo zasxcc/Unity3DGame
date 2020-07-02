@@ -19,6 +19,7 @@ public class Enemy03_Ctrl : Enemy_Ctrl
         if (!isTakeSkill)
         {
             tr.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.Self);
+
         }
         //스킬 맞았는지 검사,
         //맞았으면 한바퀴 돌린다.

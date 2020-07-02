@@ -6,7 +6,7 @@ public class EnemySpawn : MonoBehaviour
 {
 
     public float spawnTime = 2.0f;
-
+    Score sc;
     //오브젝트 풀
     public Enemy_Ctrl prefab_Enemy01;
     private List<Enemy_Ctrl> Enemy01Pool = new List<Enemy_Ctrl>();
@@ -42,13 +42,26 @@ public class EnemySpawn : MonoBehaviour
             e02.gameObject.SetActive(false);
             Enemy02Pool.Add(e02);
         }
+        sc = GameObject.Find("Score").GetComponent<Score>();
         StartCoroutine(SpawnEnemy());
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        if(sc.GetScore() >= 500 && sc.GetScore() < 1000)
+        {
+            spawnTime = 1.5f;
+        }
+        else if (sc.GetScore() >= 1000 && sc.GetScore() < 2000)
+        {
+            spawnTime = 1.0f;
+        }
+        else if (sc.GetScore() >=2000)
+        {
+            spawnTime = 0.75f;
+        }
+
     }
 
     IEnumerator SpawnEnemy()
