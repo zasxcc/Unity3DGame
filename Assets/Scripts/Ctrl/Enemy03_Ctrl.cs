@@ -52,4 +52,28 @@ public class Enemy03_Ctrl : Enemy_Ctrl
             gameObject.SetActive(false);
         }
     }
+
+    new void SkillDamageProgress(int score)
+    {
+        audioSource.PlayOneShot(skillSound);
+        PlayerCtrl pc = GameObject.Find("Player").GetComponent<PlayerCtrl>();
+
+        takeDamage = pc.attackPower * 1.5f;
+        isDeath(takeDamage, score);
+
+        //스킬 효과 발동
+        isTakeSkill = true;
+    }
+
+    new void BulletDamaeProgress(int score)
+    {
+        audioSource.PlayOneShot(hitSound);
+        PlayerCtrl pc = GameObject.Find("Player").GetComponent<PlayerCtrl>();
+
+        //적 밀기
+        tr.Translate(Vector3.forward * -1 * 1, Space.Self);
+
+        takeDamage = pc.attackPower;
+        isDeath(takeDamage, score);
+    }
 }
