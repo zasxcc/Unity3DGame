@@ -24,7 +24,9 @@
 
 ### 리소스 출처
 
-* Player Character : 현장실습 기간 중 유니티 에셋스토어에서 유로로 받은 애셋을 지원해주었었는데, 그 에셋을 사용.
-* Stage : Unity Asset Store.
+* Player Character, Enemy Character : 현장실습 기간 중 유니티 에셋스토어에서 유로로 받은 애셋을 지원해주었었는데, 그 에셋을 사용.
+* Player Sword : Unity Asset Store (Hovl studio)
+* Stage : Unity Asset Store (GrassRoadRace, Low Poly Desert Pack)
+* Effect : Unity Asset Store (JMO Assets - Cartoon FX)
 
 ---
