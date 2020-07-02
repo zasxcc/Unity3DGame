@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tr: {fileID: 0}
   animator: {fileID: 0}
-  moveSpeed: 5
+  moveSpeed: 4
 --- !u!54 &4006117769662535102
 Rigidbody:
   m_ObjectHideFlags: 0

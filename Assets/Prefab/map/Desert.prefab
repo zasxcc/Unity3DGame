@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tr: {fileID: 0}
   animator: {fileID: 0}
-  moveSpeed: 5
+  moveSpeed: 4
 --- !u!1001 &546024637512768920
 PrefabInstance:
   m_ObjectHideFlags: 0
