@@ -8,11 +8,11 @@ public class PlayerCtrl : MonoBehaviour
     private float h = 0.0f;
     private float v = 0.0f;
     public float moveSpeed = 10.0f;
-    public int HP = 100;
+    private int HP = 7;
     public float attackPower = 10.0f;
 
     public AudioClip attackSound;
-
+    private HPbar hpBar;
 
     private Transform tr;
     private Animator animator;
@@ -70,6 +70,8 @@ public class PlayerCtrl : MonoBehaviour
             skill.gameObject.SetActive(false);
             skillPool.Add(skill);
         }
+
+        hpBar = GameObject.Find("HPBAR").GetComponent<HPbar>();
     }
 
     // Update is called once per frame
@@ -173,7 +175,8 @@ public class PlayerCtrl : MonoBehaviour
     {
         if (collision.tag == "ENEMY")
         {
-            HP -= 10;
+            HP -= 1;
+            hpBar.SetHPBar(HP - 1);
             animator.Play("Take Damage");
             if (HP <= 0)
             {
