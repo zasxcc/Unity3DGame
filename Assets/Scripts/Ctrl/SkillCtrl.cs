@@ -7,6 +7,8 @@ public class SkillCtrl : MonoBehaviour
     private Transform tr;
     private float damage;
     public float speed = 20.0f;
+    private int lifeTime = 10;
+    private int life = 0;
 
     public ParticleSystem particle;
 
@@ -23,8 +25,8 @@ public class SkillCtrl : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.tag == "ENEMY")
-        {
+        //if (collision.tag == "ENEMY")
+        //{
             Vector3 v;
             v.x = 0.0f;
             v.y = 90.0f;
@@ -33,7 +35,7 @@ public class SkillCtrl : MonoBehaviour
             Vector3 position = tr.position;
             position.y = position.y - 1.0f;
             Instantiate(particle, position, Quaternion.LookRotation(v));
-            gameObject.SetActive(false);
-        }
+            //gameObject.SetActive(false);
+        //}
     }
 }

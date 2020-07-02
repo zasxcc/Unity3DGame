@@ -61,7 +61,7 @@ public class Enemy_Ctrl : MonoBehaviour
         PlayerCtrl pc = GameObject.Find("Player").GetComponent<PlayerCtrl>();
         enemyAnimator.Play("Take Damage");
 
-        takeDamage = pc.attackPower * 1.5f;
+        takeDamage = pc.attackPower * 0.0f;
         isDeath(takeDamage, score);
 
         //스킬 효과 발동
