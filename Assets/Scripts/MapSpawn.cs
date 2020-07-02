@@ -54,7 +54,7 @@ public class MapSpawn : MonoBehaviour
         while (true)
         {
             Score sc = GameObject.Find("Score").GetComponent<Score>();
-            if (sc.GetScore() < 100)
+            if (sc.GetScore() < 500)
             {
                 roadPool[currWaterIndex].transform.position = gameObject.transform.position;
                 roadPool[currWaterIndex].gameObject.SetActive(true);
