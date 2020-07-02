@@ -47,7 +47,6 @@ public class MapSpawn : MonoBehaviour
     void Update()
     {
         Score sc = GameObject.Find("Score").GetComponent<Score>();
-        Debug.Log(sc.GetScore());
     }
 
     IEnumerator SpawnRoad()

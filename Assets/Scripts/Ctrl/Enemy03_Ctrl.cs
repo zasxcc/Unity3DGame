@@ -25,8 +25,7 @@ public class Enemy03_Ctrl : Enemy_Ctrl
         //맞았으면 한바퀴 돌린다.
         if (isTakeSkill)
         {
-            tr.Rotate(0.0f, rotate, 0.0f);
-            Debug.Log(tr.rotation.y);
+            tr.Rotate(0.0f, rotate, 0.0f);;
             if (tr.rotation.y == 1.0f)
             {
                 isTakeSkill = false;

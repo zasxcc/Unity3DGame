@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class HighScoreButton : MonoBehaviour
 {
     private GameObject target;
+    private FadeInOut fade;
     // Start is called before the first frame update
     void Start()
     {
-        
+        fade = GameObject.Find("FadeInOut").GetComponent<FadeInOut>();
     }
 
     // Update is called once per frame
@@ -18,10 +19,13 @@ public class HighScoreButton : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             target = GetClickedObject();
-            
+
             if (target.Equals(gameObject))
             {
-                SceneManager.LoadScene("HighScoreScene");
+                fade.FadeIn(0.7f, () =>
+                {
+                    SceneManager.LoadScene("HighScoreScene");
+                });
             }
         }
     }

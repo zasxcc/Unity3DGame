@@ -25,7 +25,6 @@ public class Enemy02_Ctrl : Enemy_Ctrl
         if (isTakeSkill)
         {
             tr.Rotate(0.0f, rotate, 0.0f);
-            Debug.Log(tr.rotation.y);
             if (tr.rotation.y == 1.0f)
             {
                 isTakeSkill = false;

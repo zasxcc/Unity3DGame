@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class GameStartButton : MonoBehaviour
 {
     private GameObject target;
+    private FadeInOut fade;
     // Start is called before the first frame update
     void Start()
     {
-        
+        fade = GameObject.Find("FadeInOut").GetComponent<FadeInOut>();
     }
 
     // Update is called once per frame
@@ -21,7 +22,10 @@ public class GameStartButton : MonoBehaviour
 
             if (target.Equals(gameObject))
             {
-                SceneManager.LoadScene("GameScene");
+                fade.FadeIn(0.7f, () =>
+                {
+                    SceneManager.LoadScene("GameScene");
+                });
             }
         }
     }

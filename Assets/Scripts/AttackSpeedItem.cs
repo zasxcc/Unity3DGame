@@ -7,7 +7,6 @@ public class AttackSpeedItem : MonoBehaviour
     // Start is called before the first frame update
     private Transform tr;
     private float rotateSpeed = 10;
-    public float attackSpeed = 5.0f;
 
     void Start()
     {

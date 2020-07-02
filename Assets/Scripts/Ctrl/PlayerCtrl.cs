@@ -78,13 +78,25 @@ public class PlayerCtrl : MonoBehaviour
     void FixedUpdate()
     {
         h = Input.GetAxis("Horizontal");
-        v = Input.GetAxis("Vertical");
+        //v = Input.GetAxis("Vertical");
 
-        tr.Translate(Vector3.forward * moveSpeed * v * Time.deltaTime, Space.Self);
-        tr.Translate(Vector3.right * moveSpeed * h * Time.deltaTime, Space.Self);
-        
+        //tr.Translate(Vector3.forward * moveSpeed * v * Time.deltaTime, Space.Self);
+        if (tr.position.x > -4.5f && tr.position.x < 4.5f)
+        {
+            tr.Translate(Vector3.right * moveSpeed * h * Time.deltaTime, Space.Self);
+            if(tr.position.x < -4.5f)
+            {
+                tr.position = new Vector3(-4.4f, 0.0f, -6.0f);
+            }
+            else if(tr.position.x > 4.5f)
+            {
+                tr.position = new Vector3(4.4f, 0.0f, -6.0f);
+            }
+        }
+
+
         //공격
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             if (attackEnable == true)
             {
@@ -125,7 +137,10 @@ public class PlayerCtrl : MonoBehaviour
                 skillDelayCount = 0;
             }
         }
-            
+        if(HP <= 0)
+        {
+            SceneManager.LoadScene("HighScoreScene");
+        }
     }
 
     void Attack()
@@ -177,16 +192,14 @@ public class PlayerCtrl : MonoBehaviour
         {
             HP -= 1;
             hpBar.SetHPBar(HP - 1);
+           
             animator.Play("Take Damage");
-            if (HP <= 0)
-            {
-                SceneManager.LoadScene("HighScoreScene");
-            }
+            Debug.Log("HP = " + HP);
         }
 
         else if(collision.tag == "POWERITEM")
         {
-            attackPower += 10.0f;
+            attackPower += 5;
             for(int i = 0; i<bulletMaxCount; ++i)
             {
                 swordBulletPool[i].SetDamage(attackPower);
