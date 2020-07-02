@@ -36,7 +36,7 @@
 ---
 
 ### 사용된 기술
-* 씬 전환시 페이드인,아웃
+* 씬 전환시 페이드인,아웃 ( 참조 블로그 : http://blog.naver.com/PostView.nhn?blogId=bestmic&logNo=221335432969&parentCategoryNo=&categoryNo=46&viewDate=&isShowPopularPosts=false&from=postView )
 * 생성,소멸자 호출을 줄이기위한 오브젝트 풀
 * PlayerPrefe를 통한 하이스코어 저장
 * Enemy 클래스 상속을 통한 Enemy01, 02, 03
@@ -57,9 +57,10 @@
 
 * 그 외 ProTool을 통해 Item 오브젝트를 만들고 빌드를 통해 실행 파일을 만들었고, 각 cs 파일을 만들 때 초기 교수님의 강의를 통한
   다양한 프로그래밍 기법을 활용했습니다.
+  
+---
 
 ### 리소스 출처
-
 * Player Character, Enemy Character : 현장실습 기간 중 유니티 에셋스토어에서 유로로 받은 애셋을 지원해주었었는데, 그 에셋을 사용.
 * Player Sword : Unity Asset Store (Hovl studio)
 * Stage : Unity Asset Store (GrassRoadRace, Low Poly Desert Pack)
