@@ -68,3 +68,5 @@
 * Effect : Unity Asset Store (JMO Assets - Cartoon FX)
 
 ---
+
+### Build폴더에서 .exe 파일로 단독 실행 가능합니다. 
