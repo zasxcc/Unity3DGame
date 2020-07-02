@@ -29,6 +29,10 @@
 
 ![게임 타이틀 화면](./GameImage/title.png)
 
+![게임 플레이 화면](./GameImage/play.png)
+
+![게임 스코어 화면](./GameImage/score.png)
+
 ---
 
 ### 사용된 기술
