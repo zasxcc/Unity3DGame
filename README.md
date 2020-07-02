@@ -69,4 +69,5 @@
 
 ---
 
-### Build폴더에서 .exe 파일로 단독 실행 가능합니다. 
+### Play폴더에서 .exe 파일로 단독 실행 가능합니다. 
+### 커밋아이디가 zasxcc와 PIH 2개로 나오는데 GitHubDesktop을 통해 커밋.푸시한 것은 PIH로 나오고, 인터넷에서 Readme.md 파일을 수정하고 커밋, 푸시한 파일은 zasxcc로 나옵니다.
