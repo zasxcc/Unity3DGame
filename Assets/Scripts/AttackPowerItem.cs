@@ -7,7 +7,7 @@ public class AttackPowerItem : MonoBehaviour
     private Transform tr;
     private float rotateSpeed = 10;
 
-    public float attackPower = 10.0f;
+    public float attackPower = 2.0f;
 
     void Start()
     {
