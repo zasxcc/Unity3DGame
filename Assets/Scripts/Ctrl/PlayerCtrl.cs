@@ -24,7 +24,7 @@ public class PlayerCtrl : MonoBehaviour
     public SwordCtrl prefab_swordBullet;
     private List<SwordCtrl> swordBulletPool = new List<SwordCtrl>();
     //생성 갯수
-    private readonly int bulletMaxCount = 20;
+    private readonly int bulletMaxCount = 30;
     private int currBulletIndex = 0;
 
 
@@ -32,7 +32,7 @@ public class PlayerCtrl : MonoBehaviour
     public SkillCtrl prefab_Skill;
     private List<SkillCtrl> skillPool = new List<SkillCtrl>();
     //생성 갯수
-    private readonly int skillMaxCount = 5;
+    private readonly int skillMaxCount = 10;
     private int currSkillIndex = 0;
 
     

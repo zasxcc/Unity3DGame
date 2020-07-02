@@ -27,7 +27,7 @@ Transform:
   m_LocalPosition: {x: 0.51876396, y: 0.8203124, z: 0.00013561003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7940901813117001456
@@ -149,7 +149,7 @@ Transform:
   m_LocalPosition: {x: -0.51876396, y: 0.8203125, z: 0.00013545468}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7940901813117013142
@@ -210,7 +210,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.2367138, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7940901813117014108
@@ -240,7 +240,7 @@ Transform:
   m_LocalPosition: {x: 0.19112188, y: 0.8246764, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7940901813117016436
@@ -270,7 +270,7 @@ Transform:
   m_LocalPosition: {x: 0.3574462, y: 0.821664, z: -0.0008118416}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7940901813117017108
@@ -301,7 +301,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &7940901813128739636
@@ -480,7 +480,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7940901813117024168
@@ -571,7 +571,7 @@ Transform:
   m_LocalPosition: {x: -0.1275224, y: 0, z: 0.018538227}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7940901813117034832
@@ -601,7 +601,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.4649182, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7940901813117040276
@@ -727,7 +727,7 @@ Transform:
   - {fileID: 7940901813117285912}
   - {fileID: 7940901813117310588}
   - {fileID: 7940901813117348072}
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7940901813117045614
@@ -819,7 +819,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.82920057, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7940901813117052862
@@ -1021,7 +1021,7 @@ Transform:
   m_LocalPosition: {x: 0.1275224, y: 0, z: 0.018538265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7940901813117061402
@@ -1063,7 +1063,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5068303530346576568}
+  - component: {fileID: 4344171978772805400}
   - component: {fileID: 7940901813124339568}
   - component: {fileID: 3248317231777868228}
   - component: {fileID: 8203232841733960252}
@@ -1076,15 +1076,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &5068303530346576568
-RectTransform:
+--- !u!4 &4344171978772805400
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7940901813117062250}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -4.6704397}
+  m_LocalPosition: {x: -5.4541044, y: 2.0054874, z: -4.6704397}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7940901813117265602}
@@ -1105,11 +1105,6 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.4541044, y: 2.0054874}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &7940901813124339568
 Animator:
   serializedVersion: 3
@@ -1300,7 +1295,7 @@ Transform:
   m_LocalPosition: {x: -0.19112188, y: 0.8246764, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7940901813117230180
@@ -1361,7 +1356,7 @@ Transform:
   m_LocalPosition: {x: -0.3574462, y: 0.821664, z: -0.00081194926}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7940901813117233110
@@ -1579,7 +1574,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.0186795, z: 0.05047138}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5068303530346576568}
+  m_Father: {fileID: 4344171978772805400}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7940901813117254730
