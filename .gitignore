@@ -21,14 +21,7 @@
 
 # Visual Studio cache directory
 .vs/
-Assets/Character/*
-Assets/AllSkyFree/*
-Assets/#NVJOB Simple Water Shaders/*
-Assets/Effect/*
-Assets/JMO Assets/*
-Assets/TextMesh pro/*
-Assets/Hovl Studio/*
-Assets/Clean Vector Icons/*
+
 
 
 # Gradle cache directory
